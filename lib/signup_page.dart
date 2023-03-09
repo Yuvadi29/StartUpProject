@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({Key? key}) : super(key: key);
 
-  @override
-  State<LoginPage> createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+
+    //Socials Images
+    List images = [
+      "g.png",
+      "t.png",
+      "f.png",
+    ];
+
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -20,8 +23,19 @@ class _LoginPageState extends State<LoginPage> {
           height: h * 0.3,
           decoration: BoxDecoration(
               image: DecorationImage(
-            image: AssetImage("img/loginimg.png"),
-          )),
+                  image: AssetImage("img/signup.png"), fit: BoxFit.cover)),
+          child: Column(
+            children: [
+              SizedBox(
+                height: h * 0.18,
+              ),
+              CircleAvatar(
+                backgroundColor: Colors.white70,
+                radius: 50,
+                backgroundImage: AssetImage("img/profile.png"),
+              )
+            ],
+          ),
         ),
         Container(
           margin: const EdgeInsets.only(left: 20, right: 20),
@@ -33,13 +47,6 @@ class _LoginPageState extends State<LoginPage> {
                 "Hello",
                 style: TextStyle(fontSize: 70, fontWeight: FontWeight.bold),
               ),
-              // Text(
-              //   "Sign in",
-              //   style: TextStyle(
-              //     fontSize: 20,
-              //     color: Colors.pinkAccent[200],
-              //   ),
-              // ),
               SizedBox(
                 height: 50,
               ),
@@ -56,6 +63,8 @@ class _LoginPageState extends State<LoginPage> {
                     ]),
                 child: TextField(
                   decoration: InputDecoration(
+                    hintText: "Enter your Email Id",
+                      prefixIcon: Icon(Icons.email, color: Colors.pinkAccent,) ,
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide:
@@ -86,6 +95,8 @@ class _LoginPageState extends State<LoginPage> {
                     ]),
                 child: TextField(
                   decoration: InputDecoration(
+                    hintText: "Enter your Password",
+                      prefixIcon: Icon(Icons.password, color: Colors.pinkAccent,),
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide:
@@ -103,20 +114,20 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 height: 20,
               ),
-              Row(
-                children: [
-                  Expanded(
-                    child: Container(),
-                  ),
-                  Text(
-                    "Sign in",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.pinkAccent[200],
-                    ),
-                  ),
-                ],
-              )
+              // Row(
+              //   children: [
+              //     Expanded(
+              //       child: Container(),
+              //     ),
+              //     Text(
+              //       "Sign in",
+              //       style: TextStyle(
+              //         fontSize: 20,
+              //         color: Colors.pinkAccent[200],
+              //       ),
+              //     ),
+              //   ],
+              // )s
             ],
           ),
         ),
@@ -144,21 +155,35 @@ class _LoginPageState extends State<LoginPage> {
         SizedBox(height: w * 0.2),
         RichText(
             text: TextSpan(
-                text: "No Account!  ",
+                text: "SignUp with Socials",
                 style: TextStyle(
                   color: Colors.grey[500],
-                  fontSize: 20,
+                  fontSize: 16,
                 ),
-                children: [
-              TextSpan(
-                  text: "Create",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ))
-            ]))
+            )
+        ),
+
+        Wrap(
+          children: List<Widget>.generate(
+    3,
+    (index){
+            return CircleAvatar(
+              radius: 30,
+              backgroundColor: Colors.grey[200],
+
+              child: CircleAvatar(
+                radius: 30,
+                backgroundColor: Colors.grey,
+                backgroundImage: AssetImage(
+                  "img/"+images[index]
+                ),
+              ),
+            );
+            }
+          ),
+        )
       ],
-    ));
+    )
+    );
   }
 }

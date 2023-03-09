@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:loginuicolors/login_page.dart';
+import 'package:loginuicolors/signup_page.dart';
+import 'package:loginuicolors/welcome_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +17,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage()
+      // home: LoginPage()
+      // home: SignUpPage(),
+      home: WelcomePage(),
     );
   }
 }
