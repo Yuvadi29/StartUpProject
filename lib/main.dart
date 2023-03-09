@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:loginuicolors/login.dart';
-import 'package:loginuicolors/register.dart';
-// import 'package:miniproject/login.dart';
-// import 'package:miniproject/register.dart';
+import 'package:loginuicolors/login_page.dart';
 
 void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyLogin(),
-    routes: {
-      'register': (context) => MyRegister(),
-      'login': (context) => MyLogin(),
-    },
-  ));
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  // const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "InvestoFinder",
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: LoginPage()
+    );
+  }
 }
