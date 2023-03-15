@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:startup/widgets/custom_buttons.dart';
+import 'login.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -24,17 +25,33 @@ class WelcomeScreen extends StatelessWidget {
             // )
 
             // Buttons for Login Signup
+            const SizedBox(height: 40),
             CustomButton(
               buttonText: "LogIn",
               buttonColor: Colors.black,
               textColor: Colors.white,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => const Login()));
+              },
             ),
             CustomButton(
               buttonText: "SignUp",
-              buttonColor: Colors.black,
-              textColor: Colors.white,
+              buttonColor: Colors.white,
+              textColor: Colors.black,
               onPressed: () {},
+            ),
+            const SizedBox(height: 40),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Text(
+                "Continue as a Guest",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
             )
           ],
         ),
