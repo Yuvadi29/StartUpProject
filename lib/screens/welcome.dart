@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:startup/screens/signup.dart';
 import 'package:startup/widgets/custom_buttons.dart';
 import 'login.dart';
+import 'signup.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -36,10 +38,13 @@ class WelcomeScreen extends StatelessWidget {
               },
             ),
             CustomButton(
-              buttonText: "SignUp",
+              buttonText: "Register",
               buttonColor: Colors.white,
               textColor: Colors.black,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => const SignUp()));
+              },
             ),
             const SizedBox(height: 40),
             Padding(
