@@ -19,3 +19,4 @@ samples, guidance on mobile development, and a full API reference.
 - [1](https://medium.com/flutter-community/displaying-a-list-of-charts-in-flutter-63d7437d0fad)
 - [2](https://www.syncfusion.com/blogs/post/updating-live-data-in-flutter-charts.aspx)
 - [3](https://www.youtube.com/watch?v=HGkbPrTSndM)
+- [4](https://www.syncfusion.com/blogs/post/introducing-data-viz-widgets-for-flutter.aspx)
