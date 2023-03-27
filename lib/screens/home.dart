@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:startup/screens/welcome.dart';
+import 'package:startup/screens/input.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -27,7 +28,11 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           const SizedBox(height: 32.0),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const InputScreen();
+              }));
+            },
             child: const Text("Get Started"),
             style: ElevatedButton.styleFrom(
               primary: Colors.black,
