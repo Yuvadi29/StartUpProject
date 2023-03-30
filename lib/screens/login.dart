@@ -106,16 +106,15 @@ class _LoginState extends State<Login> {
                       showDialog(
                           context: context,
                           builder: (context) => AlertDialog(
-                              title: Text("Invalid Username or password. Please register again or make sure that username and password is correct"),
+                              title: const Text("Invalid Username or password. Please register again or make sure that username and password is correct"),
                               actions: [
                                 ElevatedButton(
-                                child: Text("Register Now"),
+                                child: const Text("Register Now"),
                                 onPressed: () {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) =>
-                                              SignUp()));
+                                          builder: (context) => const SignUp()));
                                   },
                           )
                   ]));
@@ -175,21 +174,8 @@ class _LoginState extends State<Login> {
                           FontAwesomeIcons.google,
                           // color: Colors.blue,
                         ),
-                        onPressed: () {},
-                        // onPressed: () async {
-                        //   await FirebaseAuthService().logininwithgoogle();
+                        onPressed: () {}
 
-                        //   if (FirebaseAuth.instance.currentUser != null) {
-                        //     if (!mounted) return;
-
-                        //     Navigator.push(
-                        //         context,
-                        //         MaterialPageRoute(
-                        //             builder: (context) => const HomeScreen()));
-                        //   } else {
-                        //     throw Exception("Error");
-                        //   }
-                        // },
                       ),
                     ),
                     Container(

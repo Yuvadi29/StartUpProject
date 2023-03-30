@@ -51,7 +51,7 @@ class _SignUpState extends State<SignUp> {
               ),
               const Padding(
                 padding: EdgeInsets.all(10.0),
-                child: Text("Hello!  Register to get \nStarted",
+                child: Text("Hello ! Register to get \nStarted",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 30,

@@ -47,17 +47,17 @@ class WelcomeScreen extends StatelessWidget {
               },
             ),
             const SizedBox(height: 40),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Text(
-                "Continue as a Guest",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 25,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            )
+            // Padding(
+            //   padding: const EdgeInsets.all(10.0),
+            //   child: Text(
+            //     "Continue as a Guest",
+            //     style: TextStyle(
+            //       color: Colors.white,
+            //       fontSize: 25,
+            //       fontWeight: FontWeight.w500,
+            //     ),
+            //   ),
+            // )
           ],
         ),
       ),
