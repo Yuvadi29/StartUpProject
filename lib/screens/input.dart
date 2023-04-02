@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:startup/screens/StartupDisplay.dart';
 
 const List<String> Domainlist = <String>[
   'E-Tech',
@@ -93,6 +94,17 @@ class _InputScreenState extends State<InputScreen> {
         currentStep: _currentStep,
         steps: _steps,
       ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return const StartupDisplay();
+            }));
+          },
+          child: const Text("Submit"),
+        )
+      ),
     );
   }
 }
@@ -166,6 +178,7 @@ class _LocationState extends State<_Location> {
       value: dropdownValue,
       icon: const Icon(Icons.arrow_downward),
       elevation: 16,
+
       style: const TextStyle(color: Colors.black),
       underline: Container(
         height: 3,
@@ -186,3 +199,5 @@ class _LocationState extends State<_Location> {
     );
   }
 }
+
+
