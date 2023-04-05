@@ -40,6 +40,7 @@ const List<String> Locationlist = <String>[
   'Bhopal'
 ];
 
+
 class InputScreen extends StatefulWidget {
   const InputScreen({Key? key}) : super(key: key);
 
@@ -99,7 +100,8 @@ class _InputScreenState extends State<InputScreen> {
         child: ElevatedButton(
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return const StartupDisplay();
+              return const DisplayResults();
+
             }));
           },
           child: const Text("Submit"),
@@ -111,7 +113,7 @@ class _InputScreenState extends State<InputScreen> {
 
 class _InvestmentAmt extends StatelessWidget {
   const _InvestmentAmt({Key? key}) : super(key: key);
-
+  
   @override
   Widget build(BuildContext context) {
     return Column(
